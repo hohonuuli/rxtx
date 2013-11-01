@@ -215,5 +215,23 @@
                 </plugin> 
             </plugins>   
         </pluginManagement>
-    </build>    
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-webdav</artifactId>
+            </extension>
+        </extensions>
+    </build>  
+    <distributionManagement>
+        <repository>
+            <uniqueVersion>true</uniqueVersion>
+            <id>mbari-maven-repository</id>
+            <url>dav:https://mbari-maven-repository.googlecode.com/svn/repository</url>
+        </repository>
+        <snapshotRepository>
+            <uniqueVersion>true</uniqueVersion>
+            <id>mbari-maven-snapshot-repository</id>
+            <url>dav:https://mbari-maven-repository.googlecode.com/svn/snapshot-repository</url>
+        </snapshotRepository>
+    </distributionManagement>  
 </project>
